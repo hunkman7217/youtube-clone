@@ -26,7 +26,7 @@ Link:'https://youtu.be/vN-w6II-ASE?si=tF8QUpZ9uNQJiaNU'
 
 {
   id:3,
-  thumbnail: 'img/V3.JPG',
+  thumbnail: 'img/V3.jpg',
 title: 'Hanumans Real Birthplace Revealed?',
 channelImg : 'img/v3channel.jpg',
 channelName :'RAAAZ by BigBrainco.',
