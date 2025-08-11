@@ -1,0 +1,619 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+margin-bottom: 10px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 20px;
+}
+
+.logo {
+  height: 60px;
+  padding-top: 2px;
+}
+
+#menu-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 0 0 279px;
+
+}
+
+.search-box input {
+  width: 436px;
+  padding: 8px 40px 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px 0 0 20px;
+  font-size: 16px;
+}
+
+#searchBtn img{
+
+  height: 34px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+#searchBtn{
+position: absolute;
+height: 36px;
+right: 0;
+cursor: pointer;
+width: 64px;
+border-radius: 0 40px 40px 0;
+border: 1px solid #ccc;
+padding:0px 4px 3px 3px;
+
+}
+
+#searchBtn:hover{
+
+  opacity: 0.8;
+}
+
+
+#micbtn{
+
+position: relative;
+border: none;
+border-radius: 100px;
+right: -82px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#micbtn:hover{
+
+  opacity: 0.8;
+}
+
+#micbtn img{
+  width: 45%;
+  height: 40px;
+
+}
+
+
+
+
+
+#CreateButton{
+  margin-left: 20px;
+}
+
+#createbtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px 6px 12px;
+  background-color: #f8f8f8; /* light gray background / by chat gpt*/
+  border: 1px solid gainsboro; /* border around the whole button */
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;}  
+
+
+  #createbtn:hover {
+  background-color: #e4e4e4; /* slightly darker on hover */
+}
+
+#createbtn img {
+  width: 18px; /* icon size */
+  height: 18px;}
+
+#pBtn {
+  font-size: 16px;
+  margin: 0; /* remove default p margins */
+  line-height: 1; /* align text nicely */
+  font-weight: bold;
+}
+
+
+
+
+
+.right .profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* navbar end */
+
+/* sideBar */
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+ width: 243px;
+  background-color: #fff;
+  height: (100vh - 50vh);
+  padding: 20px 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: width 0.3s ease; /* hidden by default for toggle */
+}
+
+.sidebar.show {
+  display: block;
+    width: 1000px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+
+}
+
+.sidebar li:hover{
+  opacity: 0.6;
+}
+
+
+
+.sidebar li  {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  width: 100%;
+
+}
+
+
+.sidebar li a{
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  
+}
+
+.sidebar li img{
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  
+}
+
+.menu-text{
+
+  display: none;
+ margin-left: 5px;
+}
+
+.sidebar.show .menu-text{
+ 
+  display: inline;
+}
+
+/* end of sideBar */
+
+
+
+#main{
+
+  display: flex;
+  flex-direction: row;
+   gap:5px;
+flex-wrap: wrap;
+
+}
+
+#item{
+  display: grid;
+   margin-left: 50px;
+}
+
+#thumbnail{
+  width: 425.25px;
+  cursor:pointer;
+border-radius: 4px;
+transition: width 0.3s ease;
+}
+
+#thumbnail:hover{
+width:420.25px;
+
+}
+
+
+.sidebar-open #thumbnail {
+  width: 390px; /* smaller size when sidebar is open */
+}
+
+#ChlLogo{
+  display: flex;
+  gap:9px;
+  margin-top: 5px;
+flex-wrap: wrap;
+
+}
+/* title style css down below */
+#titleWrap{ 
+
+  padding-top: 10px;
+  font-size: large;
+  font-weight: 100;
+   padding-bottom: 2px;
+  width: 350px;
+}
+#profile{
+  border-radius: 100%;
+width: 40px;
+padding-left:1px;
+height: 40px;
+
+}
+
+
+
+#profileName{
+color: gray;
+font-weight: 400;
+
+}
+
+#viewDate{
+display: flex;
+gap:10px;
+color: rgb(161, 156, 156);
+font-weight: 500;
+padding-bottom: 1px;
+}
+
+#link{
+ 
+  text-decoration: none;
+  color: black;
+}
+
+/* Mobile view sidebar hidden by default */
+@media (max-width: 600px) {
+ 
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+margin-bottom: 10px;
+}
+
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 0 0 27px;
+
+}
+
+.search-box input {
+  width: 289px;
+  height: 30px;
+  padding: 8px 40px 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px 0 0 20px;
+  font-size: 16px;
+}
+
+#searchBtn img{
+
+  height: 30px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+#searchBtn{
+position: absolute;
+height: 30px;
+right: 0;
+cursor: pointer;
+width: 64px;
+border-radius: 0 40px 40px 0;
+border: 1px solid #ccc;
+padding:0px 4px 3px 3px;
+
+}
+
+#searchBtn:hover{
+
+  opacity: 0.8;
+}
+
+
+#micbtn{
+
+position: relative;
+border: none;
+border-radius: 100px;
+right: -34px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+#micbtn:hover{
+
+  opacity: 0.8;
+}
+
+#micbtn img{
+  width: 40%;
+  height: 31px;
+
+}
+
+#CreateButton{
+  margin-left: 37px;
+}
+
+#createbtn {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 6px 6px 6px 6px;
+  background-color: #f8f8f8; /* light gray background / by chat gpt*/
+  border: 1px solid gainsboro; /* border around the whole button */
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;}  
+
+
+  #createbtn:hover {
+  background-color: #e4e4e4; /* slightly darker on hover */
+}
+
+#createbtn img {
+  width: 10px; /* icon size */
+  height: 10px;}
+
+#pBtn {
+  font-size: 13px;
+  margin: 0; /* remove default p margins */
+  line-height: 1; /* align text nicely */
+  font-weight: bold;
+}
+
+.right .profile {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-inline: 5px;
+}
+
+/* navbar end */
+
+/* sideBar */
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+ width: 10px;
+  background-color: #fff;
+  height: (100vh - 50vh);
+  padding: 20px 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: width 0.3s ease; /* hidden by default for toggle */
+}
+
+.sidebar.show {
+  display: block;
+   width: 2536px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+
+}
+
+.sidebar li  {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  width: 100%;
+
+}
+
+.sidebar li:hover{
+  opacity: 0.6;
+}
+
+
+
+.sidebar li a{
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  
+}
+
+.sidebar li img{
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  
+}
+
+.menu-text{
+
+  display: none;
+ margin-left: 5px;
+}
+
+.sidebar.show .menu-text{
+ 
+  display: inline;
+}
+
+/* end of sideBar */
+
+
+
+#main{
+
+  display: flex;
+  flex-direction: row;
+   gap:5px;
+flex-wrap: wrap;
+
+}
+
+#item{
+  display: grid;
+   margin-left: 67px;
+}
+
+#thumbnail{
+  width: 425.25px;
+  cursor:pointer;
+border-radius: 4px;
+transition: width 0.3s ease;
+}
+
+#thumbnail:hover{
+width:420.25px;
+
+}
+
+
+.sidebar-open #thumbnail {
+  width: 350px; /* smaller size when sidebar is open */
+}
+
+.sidebar-open #titleWrap{
+  
+  font-size: small;
+  font-weight: 100;
+   padding-bottom: 2px;
+  width: 332px;
+}
+
+.sidebar-open #profileName{
+
+  color: gray;
+font-weight: 400;
+font-size: small;
+}
+
+.sidebar-open #profile{
+border-radius: 100%;
+width: 30px;
+padding-left:1px;
+height: 30px;
+}
+.sidebar-open #viewDate{
+display: flex;
+gap:10px;
+color: rgb(161, 156, 156);
+font-weight: 500;
+padding-bottom: 1px;
+font-size: smaller;
+}
+
+
+#ChlLogo{
+  display: flex;
+  margin-top: 1px;
+flex-wrap: wrap;
+
+}
+/* title style css down below */
+#titleWrap{ 
+
+  
+  font-size: medium;
+  font-weight: 100;
+   padding-bottom: 2px;
+  width: 350px;
+}
+#profile{
+  border-radius: 100%;
+width: 40px;
+padding-left:1px;
+height: 40px;
+
+}
+
+#profileName{
+color: gray;
+font-weight: 400;
+
+}
+
+#viewDate{
+display: flex;
+gap:10px;
+color: rgb(161, 156, 156);
+font-weight: 500;
+padding-bottom: 1px;
+}
+
+#link{
+ 
+  text-decoration: none;
+  color: black;
+}
+
+
+
+
+
+}
+
+@media (max-width: 768px) {
+
+}
+
