@@ -304,7 +304,261 @@ padding-bottom: 1px;
   color: black;
 }
 
-/* Mobile view sidebar hidden by default */
+
+@media (max-width: 320px) {
+ 
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+margin-bottom: 10px;
+}
+
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 0 0 27px;
+
+}
+
+.search-box input {
+  width: 250px;
+  height: 30px;
+  padding: 8px 40px 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px 0 0 20px;
+  font-size: 16px;
+}
+
+#searchBtn img{
+
+  height: 30px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+#searchBtn{
+position: absolute;
+height: 30px;
+right: 0;
+cursor: pointer;
+width: 64px;
+border-radius: 0 40px 40px 0;
+border: 1px solid #ccc;
+padding:0px 4px 3px 3px;
+
+}
+
+#searchBtn:hover{
+
+  opacity: 0.8;
+}
+
+
+
+/* navbar end */
+
+/* sideBar */
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+ width: 10px;
+  background-color: #fff;
+  height: 100vh;
+  padding: 0px 130px 0px 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: width 0.3s ease; /* hidden by default for toggle */
+}
+
+.sidebar.show {
+  display: block;
+  width: 100px;
+} 
+
+
+
+/* by chat gpt */
+
+/* by gpt ends here */
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+
+}
+
+.sidebar li  {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  width: 100%;
+
+}
+
+.sidebar li:hover{
+  opacity: 0.6;
+}
+
+
+
+.sidebar li a{
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  
+}
+
+.sidebar li img{
+  width: 20px;
+  height: 20px;
+  margin-left:9px;
+  
+}
+
+.menu-text{
+
+  display: none;
+ margin-left: 5px;
+}
+
+.sidebar.show .menu-text{
+ 
+  display: inline;
+}
+
+/* end of sideBar */
+
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* centers the items */
+    width: 100%; /* no fixed width */
+  }
+
+  #item {
+    width: auto; /* let it adapt */
+    margin: 0 auto; /* center each thumbnail */
+  }
+
+  #thumbnail {
+    max-width:134%; /* scale with screen */
+    width: 425px; /* fits inside sidebar + screen */
+  }
+
+.sidebar-open #thumbnail {
+  width: 420px; /* smaller size when sidebar is open */
+  padding-left: 50px;
+}
+
+.sidebar-open #titleWrap {
+    font-size: small;
+    width: 239px;          /* adapt to remaining space */
+    white-space: normal;  /* allow multi-line text if needed */
+  }
+
+
+.sidebar-open  #ChlLogo {
+    display: flex;
+    flex-direction: row;  /* put them side by side */
+    align-items: center;  /* vertical center */
+    gap: 8px;
+    flex-wrap: nowrap;    /* prevent wrapping */
+  }
+
+
+
+.sidebar-open #profileName{
+
+  color: gray;
+font-weight: 400;
+font-size: small;
+margin-left: 50px;
+}
+
+.sidebar-open  #profile {
+    width: 35px;  /* smaller for mobile */
+    height: 35px;
+    flex-shrink: 0;
+    margin-left: 50px;
+
+  }
+
+.sidebar-open #viewDate{
+display: flex;
+gap:10px;
+color: rgb(161, 156, 156);
+font-weight: 500;
+padding-bottom: 1px;
+font-size: xx-small;
+margin-left: 50px;
+}
+
+
+
+ #ChlLogo {
+    display: flex;
+    flex-direction: row;  /* put them side by side */
+    align-items: center;  /* vertical center */
+    gap: 8px;
+    flex-wrap: nowrap;    /* prevent wrapping */
+  }
+
+  #profile {
+    width: 35px;  /* smaller for mobile */
+    height: 35px;
+    flex-shrink: 0;
+  }
+
+  #titleWrap {
+    font-size: small;
+    width: 239px;          /* adapt to remaining space */
+    white-space: normal;  /* allow multi-line text if needed */
+  }
+}
+
+#profileName{
+color: gray;
+font-weight: 400;
+font-size: small;
+
+}
+
+#viewDate{
+display: flex;
+gap:10px;
+color: rgb(161, 156, 156);
+font-weight: 500;
+padding-bottom: 1px;
+font-size: smaller;
+}
+
+#link{
+ 
+  text-decoration: none;
+  color: black;
+}
+
+
 @media (max-width: 600px) {
  
 
